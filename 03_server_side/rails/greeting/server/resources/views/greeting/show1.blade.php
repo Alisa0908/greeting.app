@@ -7,7 +7,7 @@
     <title>Greeting</title>
 </head>
 <body>
-    <h1>自由なメッセージ</h1>
-    <h2>{{$fight}}</h2>
+    <h1>{{$greeting1}}</h1>
+    <h2>{{$greeting2}}</h2>
 </body>
 </html>

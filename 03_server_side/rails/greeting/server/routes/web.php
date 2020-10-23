@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/comments/freeword/{fight}', ('GreetingController@show1'));
-Route::get('/comments/random', ('GreetingController@show2'));
-Route::get('/comments/{greeting}', ('GreetingController@show'));
+Route::get('/comments/freeword/{word}', ('GreetingController@show2'));
+Route::get('/comments/random', ('GreetingController@show3'));
+Route::get('/comments/{greeting}', ('GreetingController@show1'));
 //{greeting}にfreeword,randomが入るとエラーが出るから順番を変える

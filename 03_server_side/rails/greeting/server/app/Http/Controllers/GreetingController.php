@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class GreetingController extends Controller
 {
-    public function show($greeting)
+    public function show1($greeting)
     {
         switch($greeting) {
         case 'morning':
@@ -35,26 +35,21 @@ class GreetingController extends Controller
         }
 
         return view('greeting.show', ['greeting1' => $greeting1, 'greeting2' => $greeting2]);
-
     }
 
 
-    public function show1($fight)
+    public function show2($word)
     {
-        
-        return view ('greeting.show1', ['fight'=>$fight]);
-        
+        return view ('greeting.show1', ['word'=>$word]);  
     }
 
 
-    public function show2()
+    public function show3()
     {
-
-        $greetings = array('おはよう' => 0,'こんにちは' => 1,'こんばんは' => 2,'おやすみ' =>3);
+        $greetings = array('おはよう','こんにちは','こんばんは','おやすみ');
         $rand_greeting = array_rand($greetings, 1);
         
         return view ('greeting.show2', ['rand_greeting'=>$rand_greeting]);
-
     }
 
 
