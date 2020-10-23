@@ -7,7 +7,7 @@
     <title>Greeting</title>
 </head>
 <body>
-    <h1>{{$greeting1}}</h1>
-    <h2>{{$greeting2}}</h2>
+    <h1>{{$time_zone}}</h1>
+    <h2>{{$greeting}}</h2>
 </body>
 </html>

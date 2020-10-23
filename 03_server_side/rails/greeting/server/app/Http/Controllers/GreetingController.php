@@ -10,23 +10,23 @@ class GreetingController extends Controller
     {
         switch($greeting) {
         case 'morning':
-            $greeting1 = "朝の挨拶";
-            $greeting2 = 'おはようございます';
+            $time_zone = "朝の挨拶";
+            $greeting = 'おはようございます';
         break;
             
         case 'afternoon':
-            $greeting1 = "昼の挨拶";
-            $greeting2 ='こんにちは';
+            $time_zone = "昼の挨拶";
+            $greeting ='こんにちは';
         break;
         
         case 'evening':
-            $greeting1 = "夕方の挨拶";
-            $greeting2 ='こんばんは';
+            $time_zone = "夕方の挨拶";
+            $greeting ='こんばんは';
         break;
         
         case 'night':
-            $greeting1 ='夜の挨拶';
-            $greeting2 ='おやすみ';
+            $time_zone ='夜の挨拶';
+            $greeting ='おやすみ';
         break;
         
         default:
@@ -34,23 +34,19 @@ class GreetingController extends Controller
         break;
         }
 
-        return view('greeting.show', ['greeting1' => $greeting1, 'greeting2' => $greeting2]);
+        return view('greeting.show1', ['time_zone' => $time_zone, 'greeting' => $greeting]);
     }
 
 
     public function show2($word)
     {
-        return view ('greeting.show1', ['word'=>$word]);  
+        return view ('greeting.show2', ['word'=>$word]);  
     }
 
 
     public function show3()
     {
-        $greetings = array('おはよう','こんにちは','こんばんは','おやすみ');
-        $rand_greeting = array_rand($greetings, 1);
-        
-        return view ('greeting.show2', ['rand_greeting'=>$rand_greeting]);
+        $greetings = ['おはよう','こんにちは','こんばんは','おやすみ'];        
+        return view ('greeting.show3', ['greetings'=>$greetings[array_rand($greetings)]]);
     }
-
-
 }
